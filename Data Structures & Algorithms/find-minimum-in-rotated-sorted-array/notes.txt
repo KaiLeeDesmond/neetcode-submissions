@@ -1,0 +1,14 @@
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        l = 0
+        r = len(nums) - 1
+
+        while l<r: #shouldn't be <= because we want to find the minimum element and the loop should terminate once there's one element remaining
+            mid = l + (r-l)//2
+
+            if nums[mid]>nums[r]: #if the middle element is greater than the right element, it means that the minimum element isn't on the left side
+                l = mid + 1        #therefore, we have to move the left pointer to skip all of the left side elements
+            else:
+                r = mid
+        return nums[r]
+        #nums[l] also works
