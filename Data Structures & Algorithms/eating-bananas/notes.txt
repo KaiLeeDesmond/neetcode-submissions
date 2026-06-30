@@ -1,0 +1,9 @@
+we initialize r = mid because we found a viable answer and wish to save it
+
+if the helper returns false then we know that mid can't be the answer, which is why we write l = mid + 1, to skip it basically
+
+speed = S/t
+
+therefore, rate = x/t where x is count or # of items
+
+therefore, you do pile/speed, which gives us time
